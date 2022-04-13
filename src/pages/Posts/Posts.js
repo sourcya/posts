@@ -78,6 +78,9 @@ const Posts = () => {
           "Content-Type": `multipart/form-data;`,
         },
       })
+      .then(() => {
+        setToast("Post Submitted!");
+      })
       .catch(() => {
         setToast("Problem in Creating Post");
       });
@@ -134,9 +137,10 @@ const Posts = () => {
           </IonFabButton>
         </IonFab>
         <IonToast
-          isOpen={toast}
+          isOpen={!!toast}
           onDidDismiss={() => setToast(null)}
           message={toast}
+          duration={2000}
         />
         <IonModal
           isOpen={addPostModal}
