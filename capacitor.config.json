@@ -1,0 +1,8 @@
+{
+  "appId": "io.sourcya.posts.app",
+  "appName": "Guest Posts",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "build",
+  "cordova": {}
+}
